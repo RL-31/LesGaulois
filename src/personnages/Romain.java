@@ -15,11 +15,22 @@ public class Romain {
 	}
 	
 	public void parler(String texte) {
-		System.out.println(this.prendreParole() + "\"" + texte + "\"");
+		System.out.println(prendreParole() + "\"" + texte + "\"");
 	}
 	
 	private String prendreParole() {
-		return "Le romain " + this.nom + " : ";
+		return "Le Romain " + nom + " : ";
+	}
+	
+	public void recevoirCoup(int forceCoup) {
+		force -= forceCoup;
+		
+		if (force < 1) {
+			parler("J'abandonne !");
+		}
+		else {
+			parler("Aïe");
+		}
 	}
 	
 }
